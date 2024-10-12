@@ -1,12 +1,13 @@
-// Step 1: Set the total number of images
-const totalImages = 110;
-
-// Step 2: Function to generate a random image
 function showRandomImage() {
-    const randomIndex = Math.floor(Math.random() * totalImages) + 1; // Generate a random number between 1 and 365
-    const imagePath = `images/${randomIndex}.jpg`; // Construct the path to the image
-    document.getElementById('randomImage').src = imagePath; // Set the image source
-}
+  const images = [
+    "https://drive.google.com/drive/u/1/folders/1Jxl-AM2FHGyWRAUefkO1YDWK1SB8sngM",
+    "https://drive.google.com/drive/u/1/folders/1Jxl-AM2FHGyWRAUefkO1YDWK1SB8sngM",
+    "https://drive.google.com/drive/u/1/folders/1Jxl-AM2FHGyWRAUefkO1YDWK1SB8sngM",
+    "https://drive.google.com/drive/u/1/folders/1Jxl-AM2FHGyWRAUefkO1YDWK1SB8sngM",
+    "https://drive.google.com/drive/u/1/folders/1Jxl-AM2FHGyWRAUefkO1YDWK1SB8sngM",  
+    // Add more image links from Google Drive here
+  ];
 
-// Step 3: Automatically display a random image when the page loads
-window.onload = showRandomImage;
+  const randomIndex = Math.floor(Math.random() * images.length);
+  document.getElementById("randomImage").src = images[randomIndex];
+}
